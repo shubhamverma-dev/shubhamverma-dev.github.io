@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
 import {getDummyData} from '../../utills/generic';
-import {getObservable, unsubscribeObservable} from '../../utills/observable';
+
 
 @Component({
   selector: 'app-quicksort',

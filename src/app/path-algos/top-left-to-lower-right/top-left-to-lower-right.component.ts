@@ -6,14 +6,15 @@ import {getObservable, unsubscribeObservable} from '../../utills/observable';
 
 @Component({
   selector: 'app-union-find',
-  templateUrl: './union-find.component.html',
-  styleUrls: ['./union-find.component.css']
+  templateUrl: './top-left-to-lower-right.component.html',
+  styleUrls: ['./top-left-to-lower-right.component.css']
 })
-export class UnionFindComponent implements OnInit, OnDestroy {
+export class TopLeftToLowerRightComponent implements OnInit, OnDestroy {
 
   gridSize = 10;
   nums: Cell<number>[][];
   answer: PathFinderResult;
+  answer2: number;
   dp: number[][] = [];
   path = '';
   pathCompSub: Subscription;
@@ -38,6 +39,7 @@ export class UnionFindComponent implements OnInit, OnDestroy {
 
   startVisualization() {
     this.isFinished = true;
+    this.answer2 = 0;
     // this.answer = this.findMinPath(this.nums, 0, 0, 0, '');
     const res = this.processDp();
     const m = this.dp.length;
@@ -52,12 +54,14 @@ export class UnionFindComponent implements OnInit, OnDestroy {
             this.nums[i][j].backgroundColour.color = 'green';
             this.nums[i][j].backgroundColour.background = 'aqua';
             this.path += `${this.nums[i][j].value}-->`;
+            this.answer2 += this.nums[i][j].value;
             j += 1;
           } else {
             this.nums[i][j].showDownArrow = true;
             this.nums[i][j].backgroundColour.color = 'green';
             this.nums[i][j].backgroundColour.background = 'aqua';
             this.path += `${this.nums[i][j].value}-->`;
+            this.answer2 += this.nums[i][j].value;
             i += 1;
           }
         } else {
@@ -66,12 +70,14 @@ export class UnionFindComponent implements OnInit, OnDestroy {
             this.nums[i][j].backgroundColour.color = 'green';
             this.nums[i][j].backgroundColour.background = 'aqua';
             this.path += `${this.nums[i][j].value}-->`;
+            this.answer2 += this.nums[i][j].value;
             i += 1;
           } else if (j < n - 1) {
             this.nums[i][j].showRightArrow = true;
             this.nums[i][j].backgroundColour.color = 'green';
             this.nums[i][j].backgroundColour.background = 'aqua';
             this.path += `${this.nums[i][j].value}-->`;
+            this.answer2 += this.nums[i][j].value;
             j += 1;
           } else {
             i = m;
