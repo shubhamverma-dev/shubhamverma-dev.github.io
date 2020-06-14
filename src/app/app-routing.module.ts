@@ -1,7 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {TopLeftToLowerRightComponent} from './path-algos/top-left-to-lower-right/top-left-to-lower-right.component';
-import {PathAlgoComponent} from './path-algos/path-algo/path-algo.component';
 
 
 const appRoutes: Routes = [];
@@ -10,5 +8,4 @@ const appRoutes: Routes = [];
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}
