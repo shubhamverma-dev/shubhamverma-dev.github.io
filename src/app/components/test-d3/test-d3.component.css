@@ -1,0 +1,47 @@
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 4px;
+  position: relative;
+}
+.line-container {
+  display: flex;
+  width: 3vw;
+  margin: 20px auto;
+  /*align-items: center;*/
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background: black;
+  position: relative;
+}
+
+.line.arrow-right:after {
+  position: absolute;
+  content: '';
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 5px solid black;
+}
+
+.line.arrow-left:after {
+  position: absolute;
+  content: '';
+  top: -2px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-right: 5px solid black;
+}

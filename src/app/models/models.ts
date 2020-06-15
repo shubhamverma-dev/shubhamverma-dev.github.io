@@ -18,3 +18,21 @@ export interface PathFinderResult {
   row: number;
   col: number;
 }
+
+export class DragPosition {
+  left: number;
+  top: number;
+  constructor(left: number, top: number) {
+    this.left = left;
+    this.top = top;
+  }
+}
+
+export class TreeNode {
+  data: number;
+  position: DragPosition;
+  constructor(num: number, dp: DragPosition) {
+    this.data = num;
+    this.position = dp;
+  }
+}

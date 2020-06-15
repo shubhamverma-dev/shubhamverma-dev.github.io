@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {arrayToMatrix, getDummyData} from '../../utills/generic';
-import {Cell, PathFinderResult} from '../../models/models';
+import {arrayToMatrix, getDummyData} from '../../../utills/generic';
+import {Cell, PathFinderResult} from '../../../models/models';
 import {Subscription} from 'rxjs';
-import {getObservable, unsubscribeObservable} from '../../utills/observable';
+import {getObservable, unsubscribeObservable} from '../../../utills/observable';
 
 @Component({
   selector: 'app-union-find',

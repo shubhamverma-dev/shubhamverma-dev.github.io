@@ -3,6 +3,8 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {DsaModule} from './modules/dsa/dsa.module';
+import {DsaRoutingModule} from './modules/dsa/dsa-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import {DsaModule} from './modules/dsa/dsa.module';
   ],
   imports: [
     AppRoutingModule,
-    DsaModule
+    DsaModule,
+    DsaRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
