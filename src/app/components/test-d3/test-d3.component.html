@@ -1,4 +1,4 @@
-<div class="col-md-12" style="text-align: center;">
+<!-- <div class="col-md-12" style="text-align: center;">
   <h2>Try to drag nodes, have patience if they go crazy</h2>
   <div *ngFor="let le of numbers">
     <div
@@ -14,5 +14,20 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
+<div class="col-md-12"  style="text-align: center;">
+  <div class="example-boundary">
+    <div *ngFor="let le of numbers">
+      <div
+        class="dot example-box" cdkDragBoundary=".example-boundary" cdkDrag
+        *ngFor="let x of le" style="margin-left: 1vw; margin-right: 1vw;">
+        {{x.data}}
+        <div class="line-container">
+          <span class="line arrow-left" style="transform: rotate(325deg); right: 1vw"></span>
+          <span class="line arrow-right" style="transform: rotate(45deg);"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
