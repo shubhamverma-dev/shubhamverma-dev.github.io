@@ -36,3 +36,12 @@ export class TreeNode {
     this.position = dp;
   }
 }
+
+export class BinaryNode {
+  value: number;
+  left?: BinaryNode;
+  right?: BinaryNode;
+  constructor(num: number) {
+    this.value = num;
+  }
+}

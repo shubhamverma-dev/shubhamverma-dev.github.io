@@ -1,0 +1,8 @@
+<div class="col-md-12">
+    <button class="btn btn-primary" 
+            (click)=addNode()>Add node</button>
+</div>
+<div class="col-md-12" *ngIf="node" style="text-align: center;">
+    {{node.value}}
+    <app-tree></app-tree>
+</div>
