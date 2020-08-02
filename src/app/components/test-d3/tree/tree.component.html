@@ -3,6 +3,5 @@
             (click)=addNode()>Add node</button>
 </div>
 <div class="col-md-12" *ngIf="node" style="text-align: center;">
-    {{node.value}}
-    <app-tree></app-tree>
+    <app-tree-template [node]="node"></app-tree-template>
 </div>

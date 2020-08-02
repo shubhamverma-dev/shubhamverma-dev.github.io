@@ -39,8 +39,8 @@ export class TreeNode {
 
 export class BinaryNode {
   value: number;
-  left?: BinaryNode;
-  right?: BinaryNode;
+  left: BinaryNode;
+  right: BinaryNode;
   constructor(num: number) {
     this.value = num;
   }

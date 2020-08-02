@@ -7,6 +7,7 @@ import {CommonModule} from '@angular/common';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {DragableTreeComponent} from '../../components/test-d3/dragable-tree/dragable-tree.component';
 import {TreeComponent} from '../../components/test-d3/tree/tree.component';
+import {TreeTemplateComponent} from '../../components/test-d3/tree/tree-template/tree-template.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 
@@ -15,7 +16,8 @@ import {FormsModule} from '@angular/forms';
   declarations: [
     TestD3Component,
     DragableTreeComponent,
-    TreeComponent
+    TreeComponent,
+    TreeTemplateComponent,
   ],
   imports: [
     SortingModule,

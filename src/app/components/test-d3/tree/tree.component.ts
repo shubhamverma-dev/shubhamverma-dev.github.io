@@ -16,7 +16,32 @@ export class TreeComponent implements OnInit {
   ngOnInit() {}
 
   addNode() {
-    this.node = new BinaryNode(getRndInteger(0, 1000));
+    const n = new BinaryNode(getRndInteger(0, 1000));
+    if (this.node) {
+       this.insertNodeInTree(n);
+    } else {
+      this.node = n;
+    }
+  }
+
+  insertNodeInTree(nodeToInsert: BinaryNode) {
+    let root = this.node;
+    let prevNode: BinaryNode;
+
+    while (root) {
+      prevNode = root;
+      if (root.value >= nodeToInsert.value) {
+        root = root.right;
+      } else {
+        root = root.left;
+      }
+    }
+
+    if (prevNode.value >= nodeToInsert.value) {
+      prevNode.right = nodeToInsert;
+    } else {
+      prevNode.left = nodeToInsert;
+    }
   }
 
 }

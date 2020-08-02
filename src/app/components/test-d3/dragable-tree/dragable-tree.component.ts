@@ -14,7 +14,7 @@ export class DragableTreeComponent implements OnInit {
   .map(num => getDummyData(num + 1, 1000).map(value => {
     return new TreeNode(value, new DragPosition(0, 0));
   }));
-  
+
   nodeStyle3;
 
 

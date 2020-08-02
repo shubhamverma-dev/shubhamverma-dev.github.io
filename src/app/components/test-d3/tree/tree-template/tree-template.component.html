@@ -1,0 +1,11 @@
+<div class="dot" style="margin-left: 1vw; margin-right: 1vw;" *ngIf="node">
+{{node.value}}
+    <div class="line-container">
+        <div class="line arrow-left" style="transform: rotate(325deg); right: 1vw"></div>
+        <div class="line arrow-right" style="transform: rotate(45deg);"></div>
+    </div>
+    <div>
+        <span><app-tree-template [node] = "node.left"></app-tree-template></span>
+        <span><app-tree-template [node] = "node.right"></app-tree-template></span>
+    </div>
+</div>
