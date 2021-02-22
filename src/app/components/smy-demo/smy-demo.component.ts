@@ -16,14 +16,14 @@ export class SmyDemoComponent implements OnInit {
   showFrame: boolean = false;
   frameAvailable: boolean = false;
   sub: Subscription;
+  videoUrl: string = "https://youtu.be/jAPwzwHor9E"
 
 
   ngOnInit() {
-    setTimeout(() => {
       this.showFrame = true;
       this.sub = getObservable(0, 500, !this.frameAvailable)
         .subscribe(_ => {
-          let playerId = document.getElementById('vid1_youtube_api');
+          let playerId = document.getElementById('frameId_youtube_api');
           if (playerId) {
             playerId.style['pointerEvents'] = 'none';
             this.frameAvailable = true;
@@ -33,7 +33,6 @@ export class SmyDemoComponent implements OnInit {
         }, error => {
           unsubscribeObservable(this.sub);
         });
-    }, 3000)
   }
 
   tryDisable() {
