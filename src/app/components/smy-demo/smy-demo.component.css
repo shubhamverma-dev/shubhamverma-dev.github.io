@@ -1,0 +1,15 @@
+.video-js iframe{
+  pointer-events: none;
+}
+.toolbar{
+  display: none;
+}
+
+#vid1_youtube_api {
+  pointer-events: none;
+}
+
+
+.vjs-tech {
+  pointer-events: none;
+}
